@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Face Recognition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <center>
+            <div class="container">
+                <h3 id="heading" class="btn btn-warning  heading">FACE RECOGNITION</h3>
+                    <br><br>
+                <p style="color: white;">The model is trained on the following faces - </p>
+                <p style="color: white;">Me</p>
+                <p style="color: white;">Father</p>
+                <p style="color: white;">Mother</p>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label style="color: white;">Webcam View - </label>
+                    <div id="camera"></div>
+                    <br><br>
+                    <button onclick="take_snapshot();" class="btn btn-info">Capture Image</button> 
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label style="color: white;">Prediction - </label>
+                    <p class="face_name" id="result_face_name"></p>
+                    <p class="face" id="update_face"></p>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col=xs-12">
+                    <label style="color: white;">Snapahot - </label>
+                        <div id="result"></div>
+                        <br><br>
+                    <button onclick="check();" class="btn btn-info">Predict the Face</button>
+                </div>
+            </div>
+        </center>
+
+        <script src="main.js"></script>
+
+    </body>
+</html>
